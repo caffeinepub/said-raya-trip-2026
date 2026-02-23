@@ -1,0 +1,272 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-minimal-raya-theme-design-system-with-soft-cream-background-faf9f6-emerald-green-primary-color-0f5132-soft-gold-accent-c6a75e-clean-modern-sans-serif-typography-elegant-minimal-spacious-layout-and-mobile-responsive-design-with-smooth-subtle-animations",
+      "featureTitle": "Implement minimal Raya theme design system with soft cream background (#FAF9F6), emerald green primary color (#0F5132), soft gold accent (#C6A75E), clean modern sans-serif typography, elegant minimal spacious layout, and mobile responsive design with smooth subtle animations",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-top-navigation-bar-with-three-tabs-daftar-keluarga-summary-raya-and-admin-dashboard-admin-only-with-smooth-fade-transitions-between-tabs-and-thin-gold-divider-line-under-header",
+      "featureTitle": "Create top navigation bar with three tabs: 'Daftar Keluarga', 'Summary Raya', and 'Admin Dashboard' (admin only), with smooth fade transitions between tabs and thin gold divider line under header",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-daftar-keluarga-tab-with-centered-card-layout-max-width-600px-containing-family-registration-form-with-required-fields-nama-keluarga-text-makanan-yang-akan-dibawa-text-and-bilangan-ahli-hadir-dropdown-1-20",
+      "featureTitle": "Build Daftar Keluarga tab with centered card layout (max width 600px) containing family registration form with required fields: Nama Keluarga (text), Makanan Yang Akan Dibawa (text), and Bilangan Ahli Hadir (dropdown 1-20)",
+      "files": [
+        "frontend/src/components/DaftarKeluarga.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-dynamic-member-name-fields-in-daftar-keluarga-form-that-appear-with-smooth-slide-down-animation-when-bilangan-ahli-hadir-is-selected-generating-text-input-fields-labeled-nama-ahli-1-nama-ahli-2-etc-with-fade-in-stagger-animation-0-08s-delay-each-and-all-fields-required",
+      "featureTitle": "Implement dynamic member name fields in Daftar Keluarga form that appear with smooth slide-down animation when Bilangan Ahli Hadir is selected, generating text input fields labeled 'Nama Ahli 1', 'Nama Ahli 2', etc., with fade-in stagger animation (0.08s delay each) and all fields required",
+      "files": [
+        "frontend/src/components/DaftarKeluarga.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-form-submission-in-daftar-keluarga-that-shows-loading-spinner-on-submit-button-saves-family-data-to-family-raya-table-validates-all-required-fields-and-displays-success-message-data-berjaya-disimpan-after-successful-save",
+      "featureTitle": "Implement form submission in Daftar Keluarga that shows loading spinner on submit button, saves family data to family_raya table, validates all required fields, and displays success message 'Data berjaya disimpan.' after successful save",
+      "files": [
+        "frontend/src/components/DaftarKeluarga.tsx",
+        "frontend/src/hooks/useFamilyMutations.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-summary-raya-tab-with-animated-total-attendees-counter-that-counts-up-from-0-to-total-number-of-all-ahli-with-1-second-duration",
+      "featureTitle": "Build Summary Raya tab with animated total attendees counter that counts up from 0 to total number of all ahli with 1 second duration",
+      "files": [
+        "frontend/src/components/SummaryRaya.tsx",
+        "frontend/src/hooks/useCountUp.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-statistic-cards-section-in-summary-raya-displaying-total-orang-total-keluarga-total-jenis-makanan-and-keluarga-paling-ramai-with-fade-in-animation-slight-hover-lift-effect-and-soft-shadow",
+      "featureTitle": "Create statistic cards section in Summary Raya displaying: Total Orang, Total Keluarga, Total Jenis Makanan, and Keluarga Paling Ramai, with fade-in animation, slight hover lift effect, and soft shadow",
+      "files": [
+        "frontend/src/components/StatisticCard.tsx",
+        "frontend/src/components/SummaryRaya.tsx",
+        "frontend/src/hooks/useSummaryStats.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-family-cards-layout-in-summary-raya-displaying-each-family-with-nama-keluarga-total-ahli-makanan-and-list-of-ahli-names-with-real-time-updates",
+      "featureTitle": "Create family cards layout in Summary Raya displaying each family with: Nama Keluarga, Total ahli, Makanan, and list of ahli names, with real-time updates",
+      "files": [
+        "frontend/src/components/FamilyCard.tsx",
+        "frontend/src/components/SummaryRaya.tsx",
+        "frontend/src/hooks/useFamilies.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-charts-section-in-summary-raya-with-pie-chart-showing-food-distribution-and-bar-chart-showing-number-of-attendees-per-family-both-with-smooth-fade-in-animations",
+      "featureTitle": "Implement charts section in Summary Raya with pie chart showing food distribution and bar chart showing number of attendees per family, both with smooth fade-in animations",
+      "files": [
+        "frontend/src/components/FamilyBarChart.tsx",
+        "frontend/src/components/FoodPieChart.tsx",
+        "frontend/src/components/SummaryRaya.tsx",
+        "frontend/src/hooks/useFoodBreakdown.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-secure-admin-authentication-system-with-login-page-and-protect-admin-routes-so-only-authenticated-admin-users-can-access-admin-dashboard-and-perform-admin-operations-edit-delete-reset-export",
+      "featureTitle": "Create secure admin authentication system with login page and protect admin routes so only authenticated admin users can access Admin Dashboard and perform admin operations (edit, delete, reset, export)",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/ProfileSetup.tsx",
+        "frontend/src/hooks/useAdminCheck.ts",
+        "frontend/src/hooks/useUserProfile.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-admin-dashboard-with-editable-data-table-displaying-all-families-search-and-filter-functionality-by-family-name-delete-confirmation-modal-and-reset-database-confirmation-modal",
+      "featureTitle": "Build Admin Dashboard with editable data table displaying all families, search and filter functionality by family name, delete confirmation modal, and reset database confirmation modal",
+      "files": [
+        "frontend/src/components/AdminDashboard.tsx",
+        "frontend/src/components/ConfirmationModal.tsx",
+        "frontend/src/hooks/useFamilyMutations.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-excel-export-feature-with-export-full-report-button-that-generates-said-raya-trip-2026-full-report-xlsx-containing-three-sheets-sheet-1-raw-data-with-columns-nama-keluarga-nama-ahli-makanan-one-row-per-ahli-sheet-2-summary-with-total-orang-total-keluarga-total-jenis-makanan-keluarga-paling-ramai-sheet-3-makanan-breakdown-with-makanan-and-bilangan-keluarga-membawa-columns",
+      "featureTitle": "Create Excel export feature with 'Export Full Report' button that generates SAID_Raya_Trip_2026_Full_Report.xlsx containing three sheets: Sheet 1 'Raw Data' with columns Nama Keluarga, Nama Ahli, Makanan (one row per ahli); Sheet 2 'Summary' with Total Orang, Total Keluarga, Total Jenis Makanan, Keluarga Paling Ramai; Sheet 3 'Makanan Breakdown' with Makanan and Bilangan Keluarga Membawa columns",
+      "files": [
+        "frontend/src/components/AdminDashboard.tsx",
+        "frontend/src/utils/excelExport.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-real-time-data-synchronization-across-all-views-daftar-keluarga-summary-raya-admin-dashboard-so-changes-are-reflected-immediately-without-manual-refresh",
+      "featureTitle": "Implement real-time data synchronization across all views (Daftar Keluarga, Summary Raya, Admin Dashboard) so changes are reflected immediately without manual refresh",
+      "files": [
+        "frontend/src/hooks/useFamilies.ts",
+        "frontend/src/hooks/useFamilyMutations.ts",
+        "frontend/src/hooks/useSummaryStats.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

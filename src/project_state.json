@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Full-featured modern web application for SAID Raya Trip 2026 with family registration, summary statistics with charts, admin dashboard, and Excel export capabilities. Features minimal Raya theme with emerald green/gold accents, animated counters, real-time data sync, and secure admin access.",
+  "architectural_notes": [
+    "Database table 'family_raya' stores nama_keluarga (text), makanan (text), ahli_keluarga (array), created_at (timestamp)",
+    "Admin authentication with secure route protection for dashboard access",
+    "Real-time data sync required across all tabs and views",
+    "Excel export generates multi-sheet workbook with raw data, summaries, and breakdowns",
+    "Animated UI elements: count-up counter (1s), fade-in cards, stagger animations (0.08s delay)",
+    "Color scheme: cream background (#FAF9F6), emerald primary (#0F5132), gold accent (#C6A75E)",
+    "Charts implementation: pie chart for food distribution, bar chart for family attendance"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-minimal-raya-theme-design-system-with-soft-cream-background-faf9f6-emerald-green-primary-color-0f5132-soft-gold-accent-c6a75e-clean-modern-sans-serif-typography-elegant-minimal-spacious-layout-and-mobile-responsive-design-with-smooth-subtle-animations",
+      "title": "Implement minimal Raya theme design system with soft cream background (#FAF9F6), emerald green primary color (#0F5132), soft gold accent (#C6A75E), clean modern sans-serif typography, elegant minimal spacious layout, and mobile responsive design with smooth subtle animations",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-top-navigation-bar-with-three-tabs-daftar-keluarga-summary-raya-and-admin-dashboard-admin-only-with-smooth-fade-transitions-between-tabs-and-thin-gold-divider-line-under-header",
+      "title": "Create top navigation bar with three tabs: 'Daftar Keluarga', 'Summary Raya', and 'Admin Dashboard' (admin only), with smooth fade transitions between tabs and thin gold divider line under header",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-daftar-keluarga-tab-with-centered-card-layout-max-width-600px-containing-family-registration-form-with-required-fields-nama-keluarga-text-makanan-yang-akan-dibawa-text-and-bilangan-ahli-hadir-dropdown-1-20",
+      "title": "Build Daftar Keluarga tab with centered card layout (max width 600px) containing family registration form with required fields: Nama Keluarga (text), Makanan Yang Akan Dibawa (text), and Bilangan Ahli Hadir (dropdown 1-20)",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-dynamic-member-name-fields-in-daftar-keluarga-form-that-appear-with-smooth-slide-down-animation-when-bilangan-ahli-hadir-is-selected-generating-text-input-fields-labeled-nama-ahli-1-nama-ahli-2-etc-with-fade-in-stagger-animation-0-08s-delay-each-and-all-fields-required",
+      "title": "Implement dynamic member name fields in Daftar Keluarga form that appear with smooth slide-down animation when Bilangan Ahli Hadir is selected, generating text input fields labeled 'Nama Ahli 1', 'Nama Ahli 2', etc., with fade-in stagger animation (0.08s delay each) and all fields required",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-form-submission-in-daftar-keluarga-that-shows-loading-spinner-on-submit-button-saves-family-data-to-family-raya-table-validates-all-required-fields-and-displays-success-message-data-berjaya-disimpan-after-successful-save",
+      "title": "Implement form submission in Daftar Keluarga that shows loading spinner on submit button, saves family data to family_raya table, validates all required fields, and displays success message 'Data berjaya disimpan.' after successful save",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-summary-raya-tab-with-animated-total-attendees-counter-that-counts-up-from-0-to-total-number-of-all-ahli-with-1-second-duration",
+      "title": "Build Summary Raya tab with animated total attendees counter that counts up from 0 to total number of all ahli with 1 second duration",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-statistic-cards-section-in-summary-raya-displaying-total-orang-total-keluarga-total-jenis-makanan-and-keluarga-paling-ramai-with-fade-in-animation-slight-hover-lift-effect-and-soft-shadow",
+      "title": "Create statistic cards section in Summary Raya displaying: Total Orang, Total Keluarga, Total Jenis Makanan, and Keluarga Paling Ramai, with fade-in animation, slight hover lift effect, and soft shadow",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-family-cards-layout-in-summary-raya-displaying-each-family-with-nama-keluarga-total-ahli-makanan-and-list-of-ahli-names-with-real-time-updates",
+      "title": "Create family cards layout in Summary Raya displaying each family with: Nama Keluarga, Total ahli, Makanan, and list of ahli names, with real-time updates",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-charts-section-in-summary-raya-with-pie-chart-showing-food-distribution-and-bar-chart-showing-number-of-attendees-per-family-both-with-smooth-fade-in-animations",
+      "title": "Implement charts section in Summary Raya with pie chart showing food distribution and bar chart showing number of attendees per family, both with smooth fade-in animations",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-secure-admin-authentication-system-with-login-page-and-protect-admin-routes-so-only-authenticated-admin-users-can-access-admin-dashboard-and-perform-admin-operations-edit-delete-reset-export",
+      "title": "Create secure admin authentication system with login page and protect admin routes so only authenticated admin users can access Admin Dashboard and perform admin operations (edit, delete, reset, export)",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-admin-dashboard-with-editable-data-table-displaying-all-families-search-and-filter-functionality-by-family-name-delete-confirmation-modal-and-reset-database-confirmation-modal",
+      "title": "Build Admin Dashboard with editable data table displaying all families, search and filter functionality by family name, delete confirmation modal, and reset database confirmation modal",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-excel-export-feature-with-export-full-report-button-that-generates-said-raya-trip-2026-full-report-xlsx-containing-three-sheets-sheet-1-raw-data-with-columns-nama-keluarga-nama-ahli-makanan-one-row-per-ahli-sheet-2-summary-with-total-orang-total-keluarga-total-jenis-makanan-keluarga-paling-ramai-sheet-3-makanan-breakdown-with-makanan-and-bilangan-keluarga-membawa-columns",
+      "title": "Create Excel export feature with 'Export Full Report' button that generates SAID_Raya_Trip_2026_Full_Report.xlsx containing three sheets: Sheet 1 'Raw Data' with columns Nama Keluarga, Nama Ahli, Makanan (one row per ahli); Sheet 2 'Summary' with Total Orang, Total Keluarga, Total Jenis Makanan, Keluarga Paling Ramai; Sheet 3 'Makanan Breakdown' with Makanan and Bilangan Keluarga Membawa columns",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-real-time-data-synchronization-across-all-views-daftar-keluarga-summary-raya-admin-dashboard-so-changes-are-reflected-immediately-without-manual-refresh",
+      "title": "Implement real-time data synchronization across all views (Daftar Keluarga, Summary Raya, Admin Dashboard) so changes are reflected immediately without manual refresh",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design system with minimal Raya theme (cream/emerald/gold colors, clean typography, mobile responsive)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Top navigation with smooth fade transitions between tabs (Daftar Keluarga, Summary Raya, Admin Dashboard)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Daftar Keluarga tab with family registration form (nama, makanan, dynamic ahli fields with animations)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Summary Raya tab with animated counter, statistic cards, family cards, and charts (pie/bar)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Admin authentication system with secure login and protected routes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Admin Dashboard with editable data table, search/filter, delete/reset modals",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Excel export feature with 3 sheets (Raw Data, Summary, Makanan Breakdown)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Database setup with family_raya table (nama_keluarga, makanan, ahli_keluarga array, created_at)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Real-time data synchronization across all views",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Create backend database table 'family_raya' with fields: nama_keluarga (text), makanan (text), ahli_keluarga (array of names), and created_at (timestamp)",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Implement backend query functions to calculate and return: total number of attendees, total number of families, total unique food types, and family with most members for Summary Raya statistics",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Implement backend functions for admin operations: update family record, delete family record, and reset entire family_raya database",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SAID Raya Trip 2026",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

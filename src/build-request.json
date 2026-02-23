@@ -1,0 +1,398 @@
+{
+  "kind": "build_request",
+  "title": "Build SAID Raya Trip 2026 family event management application",
+  "projectName": "SAID Raya Trip 2026",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement minimal Raya theme design system with soft cream background (#FAF9F6), emerald green primary color (#0F5132), soft gold accent (#C6A75E), clean modern sans-serif typography, elegant minimal spacious layout, and mobile responsive design with smooth subtle animations",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Soft cream background (#FAF9F6)",
+          "Emerald green primary color (#0F5132)",
+          "Soft gold accent (#C6A75E)",
+          "Clean modern sans-serif typography",
+          "Elegant, minimal, spacious layout",
+          "Mobile responsive",
+          "Smooth and subtle animations (no flashy effects)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background color is #FAF9F6 throughout the application",
+        "Primary interactive elements use #0F5132 emerald green",
+        "Accent elements use #C6A75E soft gold",
+        "Typography uses clean modern sans-serif fonts",
+        "Layout is spacious with adequate whitespace",
+        "Application is fully responsive on mobile devices",
+        "Animations are smooth and subtle without flashy effects",
+        "Thin gold divider line appears under header"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create top navigation bar with three tabs: 'Daftar Keluarga', 'Summary Raya', and 'Admin Dashboard' (admin only), with smooth fade transitions between tabs and thin gold divider line under header",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Top navigation: Daftar Keluarga, Summary Raya, Admin Dashboard (admin only)",
+          "Smooth fade transition between tabs",
+          "Thin gold divider line under header"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar displays three tabs horizontally",
+        "Tab labels are 'Daftar Keluarga', 'Summary Raya', and 'Admin Dashboard'",
+        "Admin Dashboard tab only visible when user is authenticated as admin",
+        "Clicking tabs triggers smooth fade transition between content sections",
+        "Thin gold line divider appears immediately below navigation bar"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build Daftar Keluarga tab with centered card layout (max width 600px) containing family registration form with required fields: Nama Keluarga (text), Makanan Yang Akan Dibawa (text), and Bilangan Ahli Hadir (dropdown 1-20)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a centered card layout (max width 600px)",
+          "Nama Keluarga (required)",
+          "Makanan Yang Akan Dibawa (required)",
+          "Bilangan Ahli Hadir (dropdown 1–20, required)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form card is centered on page with maximum width of 600px",
+        "Nama Keluarga field is a required text input",
+        "Makanan Yang Akan Dibawa field is a required text input",
+        "Bilangan Ahli Hadir is a required dropdown with options 1 through 20",
+        "All fields display required validation indicators"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement dynamic member name fields in Daftar Keluarga form that appear with smooth slide-down animation when Bilangan Ahli Hadir is selected, generating text input fields labeled 'Nama Ahli 1', 'Nama Ahli 2', etc., with fade-in stagger animation (0.08s delay each) and all fields required",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "When bilangan ahli is selected: Smooth slide-down animation",
+          "Dynamically generate required text input fields: Nama Ahli 1, Nama Ahli 2, etc.",
+          "Each input field appears with fade-in stagger animation (0.08s delay each)",
+          "All fields are required"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When user selects number in Bilangan Ahli Hadir dropdown, corresponding number of name input fields appear",
+        "Container animates with smooth slide-down motion",
+        "Each name field is labeled sequentially: 'Nama Ahli 1', 'Nama Ahli 2', etc.",
+        "Each field appears with fade-in animation staggered by 0.08 seconds",
+        "All dynamically generated name fields are required",
+        "Changing the number updates the displayed fields accordingly"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create backend database table 'family_raya' with fields: nama_keluarga (text), makanan (text), ahli_keluarga (array of names), and created_at (timestamp)",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Save into database table: 'family_raya'",
+          "nama_keluarga (text)",
+          "makanan (text)",
+          "ahli_keluarga (array of names)",
+          "created_at (timestamp)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend defines stable storage for family_raya records",
+        "Each record contains nama_keluarga as text",
+        "Each record contains makanan as text",
+        "Each record contains ahli_keluarga as array of text strings",
+        "Each record contains created_at timestamp automatically set on creation"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement form submission in Daftar Keluarga that shows loading spinner on submit button, saves family data to family_raya table, validates all required fields, and displays success message 'Data berjaya disimpan.' after successful save",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Button shows loading spinner",
+          "Save into database table: 'family_raya'",
+          "Show simple success message: 'Data berjaya disimpan.'",
+          "All fields are required"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submit button displays loading spinner during submission",
+        "Form validates that all required fields are filled before submission",
+        "Family data is saved to backend family_raya table",
+        "Success message 'Data berjaya disimpan.' appears after successful save",
+        "Form resets after successful submission"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build Summary Raya tab with animated total attendees counter that counts up from 0 to total number of all ahli with 1 second duration",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Animated Total Attendees Counter",
+          "Count-up animation from 0 to total number of all ahli",
+          "Duration 1 second"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Counter displays prominently on Summary Raya tab",
+        "Animation starts from 0 and counts up to current total of all ahli",
+        "Animation duration is exactly 1 second",
+        "Counter updates when new families are added"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create statistic cards section in Summary Raya displaying: Total Orang, Total Keluarga, Total Jenis Makanan, and Keluarga Paling Ramai, with fade-in animation, slight hover lift effect, and soft shadow",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Statistic Cards: Total Orang, Total Keluarga, Total Jenis Makanan, Keluarga Paling Ramai",
+          "Cards should: Fade-in animation, Slight hover lift effect, Soft shadow"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Four statistic cards are displayed in Summary Raya",
+        "Cards show: Total Orang (total attendees), Total Keluarga (total families), Total Jenis Makanan (unique food types), Keluarga Paling Ramai (family with most members)",
+        "Cards animate in with fade-in effect on load",
+        "Cards have soft shadow styling",
+        "Cards lift slightly on hover interaction"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement backend query functions to calculate and return: total number of attendees, total number of families, total unique food types, and family with most members for Summary Raya statistics",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Total Orang",
+          "Total Keluarga",
+          "Total Jenis Makanan",
+          "Keluarga Paling Ramai"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend function returns total count of all ahli across all families",
+        "Backend function returns total count of registered families",
+        "Backend function returns count of unique food types",
+        "Backend function identifies and returns family with highest ahli count",
+        "All statistics update in real-time when data changes"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create family cards layout in Summary Raya displaying each family with: Nama Keluarga, Total ahli, Makanan, and list of ahli names, with real-time updates",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Family Cards Layout: For each family show: Nama Keluarga, Total ahli, Makanan, List of ahli names",
+          "Real-time updates required"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each registered family displays as a card in Summary Raya",
+        "Card shows family name prominently",
+        "Card displays total number of members",
+        "Card shows food item being brought",
+        "Card lists all member names",
+        "Cards update automatically when new families register"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Implement charts section in Summary Raya with pie chart showing food distribution and bar chart showing number of attendees per family, both with smooth fade-in animations",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Pie Chart: Food distribution",
+          "Bar Chart: Number of attendees per family",
+          "Charts fade in smoothly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Pie chart visualizes distribution of food items across families",
+        "Bar chart displays number of attendees for each family",
+        "Both charts animate in with smooth fade effect",
+        "Charts are responsive and properly sized",
+        "Charts update when data changes"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Create secure admin authentication system with login page and protect admin routes so only authenticated admin users can access Admin Dashboard and perform admin operations (edit, delete, reset, export)",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create secure Admin Login page",
+          "Only admin can: Access Admin Dashboard, Edit family entries, Delete entries, Reset database, Export Excel reports",
+          "Protect admin routes securely"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin login page with authentication form exists",
+        "Backend validates admin credentials securely",
+        "Admin Dashboard route is protected and only accessible when authenticated",
+        "Non-admin users cannot access admin-only features",
+        "Admin session persists appropriately",
+        "Logout functionality exists for admin users"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Build Admin Dashboard with editable data table displaying all families, search and filter functionality by family name, delete confirmation modal, and reset database confirmation modal",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Editable data table of all families",
+          "Search & filter by family name",
+          "Delete confirmation modal",
+          "Reset database confirmation modal"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin Dashboard displays table with all family records",
+        "Table rows are editable in place",
+        "Search input filters families by name in real-time",
+        "Delete button on each row opens confirmation modal before deletion",
+        "Reset database button opens confirmation modal before resetting all data",
+        "All modals have clear confirm/cancel options"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Implement backend functions for admin operations: update family record, delete family record, and reset entire family_raya database",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Edit family entries",
+          "Delete entries",
+          "Reset database"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend function updates existing family record with new data",
+        "Backend function deletes specified family record",
+        "Backend function clears all records from family_raya table",
+        "All operations are protected and only callable by authenticated admin"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Create Excel export feature with 'Export Full Report' button that generates SAID_Raya_Trip_2026_Full_Report.xlsx containing three sheets: Sheet 1 'Raw Data' with columns Nama Keluarga, Nama Ahli, Makanan (one row per ahli); Sheet 2 'Summary' with Total Orang, Total Keluarga, Total Jenis Makanan, Keluarga Paling Ramai; Sheet 3 'Makanan Breakdown' with Makanan and Bilangan Keluarga Membawa columns",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add button: 'Export Full Report'",
+          "Generate Excel file: SAID_Raya_Trip_2026_Full_Report.xlsx",
+          "Sheet 1: Raw Data Columns: Nama Keluarga, Nama Ahli, Makanan (Each ahli must be one row)",
+          "Sheet 2: Summary Total Orang, Total Keluarga, Total Jenis Makanan, Keluarga Paling Ramai",
+          "Sheet 3: Makanan Breakdown Makanan, Bilangan Keluarga Membawa",
+          "Ensure proper formatting and clean table layout"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Export Full Report button is visible in Admin Dashboard",
+        "Clicking button generates Excel file named SAID_Raya_Trip_2026_Full_Report.xlsx",
+        "Sheet 1 contains raw data with each family member as separate row showing family name, member name, and food",
+        "Sheet 2 contains summary statistics: total people, total families, total food types, family with most members",
+        "Sheet 3 contains food breakdown showing each unique food item and count of families bringing it",
+        "All sheets have clean formatting with proper column headers and data alignment",
+        "File downloads automatically to user's device"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Implement real-time data synchronization across all views (Daftar Keluarga, Summary Raya, Admin Dashboard) so changes are reflected immediately without manual refresh",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Real-time updates required",
+          "Real-time data sync"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When new family is registered, Summary Raya updates automatically",
+        "When admin edits or deletes family, all views update immediately",
+        "Statistics and charts refresh automatically when data changes",
+        "No manual page refresh needed to see latest data"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use only React, Tailwind CSS, and React Query for frontend",
+    "Backend must use Motoko in single-actor architecture",
+    "Do not modify immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "All animations must be smooth and subtle without flashy effects",
+    "Admin routes must be securely protected"
+  ],
+  "nonGoals": [
+    "Support for multiple languages beyond the provided Malay labels",
+    "User registration system for non-admin family members",
+    "Email notifications or reminders",
+    "Payment or contribution tracking features",
+    "Photo uploads for families or food items",
+    "Social media integration or sharing features",
+    "Calendar or date management for the event",
+    "Multiple admin roles or permission levels"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

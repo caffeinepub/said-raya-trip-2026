@@ -1,2 +1,3 @@
-# said-raya-trip-2026
-Exported from Caffeine project: SAID Raya Trip 2026
+## SAID Raya Trip 2026
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
